@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+   <ul>
+    <li>First Element</li>
+   <li>Second Element</li>
+   <li>Third Element</li>
+</ul> 
+<script>
+    // root node
+   // console.log(document)
+    //console.log(document.documentElement) //gives the root elementThe documentElement property returns a document's element (as an Element object).
+    // The documentElement is read-only.For HTML documents the returned object is the <html> element.
+    //console.log(document.head) console.log(document.body) gives body and head
+    //children nodes
+    //childNodes returns child nodes (element nodes, text nodes, and comment nodes).children returns child elements 
+    //(not text and comment nodes).
+   // console.log(document.body.childNodes) // this function considers identation as text as can be seen.
+   //console.log(document.body.children) //gives all children nodes excluding identation
+
+   //firstChild returns the first child node (an element node, a text node or a comment node). Whitespace between elements are also text nodes.
+
+//firstElementChild returns the first child element (not text and comment nodes).
+//looping through nodes
+//for(node of document.body.children)
+ //console.log("in loop",node)
+ //dom collection and array are different things
+  /*console.log(document.body.firstChild) 
+   console.log(document.body.lastChild)
+   console.log(document.body.firstElementChild)
+   console.log(document.body.lastElementChild)
+    console.log(document)*/
+
+  /*  //siblings
+    const ulTag=document.body.children[0];
+    const firstLi=ulTag.children[0];
+    const secondLi=ulTag.children[1];
+    console.log(secondLi.previousElementSibling) //gives the previous sibling
+    console.log(firstLi.nextElementSibling) //gives next sibling*/
+
+</script>
+</body>
+</html> 

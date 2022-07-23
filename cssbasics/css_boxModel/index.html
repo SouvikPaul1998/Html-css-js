@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: burlywood;
+            border: 5px solid rgb(21 87 168);/*padding is the distance between internal and external*/
+            padding:30px; /*padding is from the internal*/
+            margin:40px; /*margin is from the  external*/
+            /*properties like padding,margin-top,left,right,bottom individually can be used to give from i direction*/
+            /*margin/padding-x & y can be used for giving from x and y directions*/
+            border-radius:23px;
+            width:233px; /*padding adds to width if other property is not given.Here actually width is 233 +40 padding.So toytal element width seems like 274*/
+            box-sizing:border-box; /*this will keep the width fixed that width of element will be total 233 including padding*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente unde porr
+             in quidem totam recusandae dolore expedita 
+            eum inventore reiciendis quam, provident ad soluta error maiores doloribus.</p>
+    </div>
+    <div class="container">
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente unde porr
+             in quidem totam recusandae dolore expedita 
+            eum inventore reiciendis quam, provident ad soluta error maiores doloribus.</p>
+    </div>
+    <div class="container">
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente unde porr
+             in quidem totam recusandae dolore expedita 
+            eum inventore reiciendis quam, provident ad soluta error maiores doloribus.</p>
+    </div>
+</body>
+</html>
