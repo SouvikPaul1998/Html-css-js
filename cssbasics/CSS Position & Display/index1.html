@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .span1{
+            position:relative;/*position changes w.r.t to it's original placeholder*/
+            bottom: 10px;
+            left:10px;
+            background-color: pink;
+        }
+        .span2{
+            position: fixed; /* when fixed is initialized it means we are specifying dimensions from(relative to) the viewport*/
+            top:10px;
+            left : 40px;
+            background-color: green;
+        }
+        .parent{
+            position:relative;
+            height:120px;
+            width:100px;
+            background-color: pink;
+        }
+        .child{
+            position:absolute;
+            top:20px;
+            left:10px;
+            color:red;
+        }
+        .parent1{
+            position:relative;
+            height:200px;
+            width:200px;
+            background-color: pink;
+        }
+        .child1{
+            position:absolute;
+            top:50%;
+            left:50%;/*when we just apply left top or right bottom then child's left-top corner starts from the exact center.
+            but if we want our child to have the center at parents center, then we have have to arrange according to the calculation,
+            and use transform-translate*/
+            transform: translate(-50%,-50%);
+            color:red;
+        }
+        .stick{
+            position: sticky; /*works only in case of scroll.Sticks to the top 10px and remains fixed there at 10 px from viewport.*/
+
+            margin:100px;
+            background: pink;
+            font-size: 40px;
+            top:10px;
+            
+        }
+    </style>
+    <script>
+        var x="",i;
+        for(i=1;i<=100;i++){
+            x=x+"<br>";
+        }
+        document.getElementById("brloop").innerHTML=x;
+    </script>
+</head>
+<body>
+    <h1>This is static</h1>
+    <span class="span1" >I am relative to myself</span>
+    <span>&nbsp;&nbsp;&nbsp; I am fixed just after span1 to view origin pos</span>
+    <span class="span2">&nbsp;&nbsp;&nbsp; I am fixed styled i.e my dimensions are fixed to the window(viewport)</span>
+
+    <div class="parent">
+        <span class="child">I am absolute to my parent</span> <!--it adjusts itself as per the parent. For a child to be absolute it's must have
+        it's parent as relative,if not it will check for grandparent and so on checks for highier levels and adjusts according to it.If none element
+    s are it adjusts according to body which is by default relative to viewport -->
+    </div>
+    <h1>Something</h1>
+    <div class="parent1">
+        <span class="child1">I am absolute to my parent</span> <!--This is mainly for practicing transform and translate -->
+    </div>
+    <div class="stick">
+        This is to test Sticky Property
+    </div>
+    <div id="brloop">
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+</html>
