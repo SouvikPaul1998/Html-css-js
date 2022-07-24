@@ -1,0 +1,87 @@
+/*Flex foggy website for playing flexbox games*/
+
+.parent{
+    background-color: aquamarine;
+    display: flex;
+    padding:10px;
+    gap:10px;/* helps in keeping a gap of 10px in flex elements*/
+    justify-content: flex-end;/* justify content can have flex-start(left) which is default,flexend(right),center*/
+}
+.child{
+    /* when i use this they might not be equally distributed
+    so use flex instead which uses ratios
+    width: 100px;
+    */
+    height: 100px;
+    flex:1;
+    background-color: blueviolet;
+    color:white;
+    /*code for centering the numbers*/
+    display:flex;
+    justify-content: center;/*centers in flex axis*/
+    align-items: center;
+}
+/* other justify content value can be space-between , space around etc.*/
+.parent2{
+    margin-top: 15px;
+    background-color: aquamarine;
+    display: flex;
+    padding:10px;
+    gap:10px;/* helps in keeping a gap of 10px in flex elements*/
+    justify-content: space-evenly;/* Space Evenly acts as a spacing evenly distributed */
+}
+.child2{
+    /* when i use this they might not be equally distributed
+    so use flex instead which uses ratios
+    width: 100px;
+    */
+    height: 100px;
+    flex:1;
+    background-color: blueviolet;
+    color:white;
+    /*code for centering the numbers*/
+    display:flex;
+    justify-content: center;/*centers in flex axis*/
+    align-items: center;
+}
+.parent3{
+    margin-top: 15px;
+    background-color: aquamarine;
+    display: flex;
+    padding:10px;
+    gap:10px;
+    justify-content: flex-start;
+    flex-wrap: wrap;/*The flex-wrap CSS property sets whether flex items are forced onto one line or can wrap onto multiple lines. If wrapping is allowed, it sets the direction that lines are stacked.)*/
+}
+.child3{
+    
+    height: 100px;
+    flex:1;
+    background-color: blueviolet;
+    color:white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parent4{
+    margin-top: 15px;
+    background-color: aquamarine;
+    display: flex;
+    padding:10px;
+    gap:10px;
+    justify-content: flex-start;
+    flex-wrap: wrap;/*The flex-wrap CSS property sets whether flex items are forced onto one line or can wrap onto multiple lines. If wrapping is allowed, it sets the direction that lines are stacked.)*/
+}
+.child4{
+    
+    height: 100px;
+    min-width:100px;/* this ensures atleast 100px is maintained for
+    each elements*/
+    flex:1;
+    background-color: blueviolet;
+    color:white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
