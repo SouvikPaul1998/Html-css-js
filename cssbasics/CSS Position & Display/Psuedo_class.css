@@ -1,0 +1,71 @@
+button{
+  padding:10px;
+  background: brown;
+  color:white;
+  font-weight: 600px;
+  cursor: pointer;  
+  border:none;
+  margin-left:20px
+}
+
+button:hover{  /*active, focus and hover are pseudo classes*/
+    background: coral;
+    color: brown;
+
+}
+button:active{  /*hover can be accessed with elements like h1 etc. But active and focus can be
+                 accessed only with stuffs which you can interact with like input tags,buttons etc.*/
+    border:3px solid aqua;
+}
+button:focus{
+    border: 3px solid yellowgreen;
+}
+input{
+    display:block;
+    margin-bottom:10px;
+    margin-left: 20px;
+    border-radius: 5px;
+    border:none;
+    background-color: bisque;
+    height:30px
+}
+input:focus{
+ border:3px solid cyan;
+}
+
+.Psuedo_Element::before{
+    content:"Hello Before";
+}
+
+
+.Psuedo_Element::after{
+    content:"Dev after using Css Pseudo Element";
+}
+.square{
+    padding:10px;
+    
+    color:white;
+    background-color: black;
+    position: relative;
+    border-radius: 30px; /*Any unithighier than half of width and height will make the shape circular*/
+    position:relative;
+}
+.square::before{
+ content:"";
+ position: absolute;
+ height:10px;
+ width:10px; 
+ background-color: cyan; 
+ top: -5px;
+ left:-5px;
+}
+
+.square::after{
+    content:"";
+    position: absolute;
+    height:10px;
+    width:10px;   
+    background-color: cyan; 
+    top: -5px;
+    right:-5px;
+   }

@@ -55,6 +55,22 @@
             top:10px;
             
         }
+        .block{
+            background-color: red;
+        }
+        .Inline{
+            background-color: green;
+        }
+
+       .block2inline{
+        margin-top:10px;
+        background-color: pink;
+        display:inline
+       }
+       .block2inline2{
+        background-color: cyan;
+        display:inline
+       }
     </style>
     <script>
         var x="",i;
@@ -62,6 +78,7 @@
             x=x+"<br>";
         }
         document.getElementById("brloop").innerHTML=x;
+       
     </script>
 </head>
 <body>
@@ -85,6 +102,13 @@
     <div id="brloop">
 
     </div>
+    <!--Display elements are mainly block level,inline, block inline
+    Eg:block levels are div,h1 etc. which takes up the full screen width of the block.Spans are inline which
+only takes the required amt of space.-->
+<div class="block"> I am block div</div>
+<span class="Inline">I am inline span</span>
+<div class="block2inline">I am merging two inline</div>
+<div class="block2inline2">I am merging two inline</div>
     <br>
     <br>
     <br>
