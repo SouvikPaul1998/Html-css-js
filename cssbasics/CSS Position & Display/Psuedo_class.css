@@ -69,3 +69,27 @@ input:focus{
     top: -5px;
     right:-5px;
    }
+   .parent{
+    margin-top:20px;
+   }
+   .child{
+    margin-top:5px;
+    display:inline-block;
+    width: 40px;
+    background-color: cyan;
+   }
+   .child:first-child{
+    background: burlywood;
+   }
+   .child:last-child{
+    background: green;
+   }
+   .child:nth-child(4){
+    background-color: yellow;
+   }
+   .child:nth-child(odd){
+    border:3px solid red;
+   }
+   .child:nth-child(even){
+    border: 3px solid orange;
+   }
