@@ -1,0 +1,25 @@
+h1{
+    font-size: 60px;
+}
+.parent{
+ display:flex;
+ background-color: aqua;
+ padding :5px;
+ gap:10px;
+ flex-wrap: wrap;   
+}
+.child{
+    height:100px;
+    width:100px;
+    background-color:indigo;
+}
+@media screen and (max-width :580px){
+    /* when screen width is less than 580 this styles are applied:*/
+    
+    h1{
+        font-size: 30px;
+    }
+    .child{
+        width:40%;
+    }
+}
