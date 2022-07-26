@@ -13,8 +13,8 @@
         function add(a,b,...rest){   //we can use any variable instead of rest it's just variable before which ... needs to be present
         
             sum=a+b;
-            console.log(rest) //array object. 
-            console.log("Type of rest operator",typeof rest); //check prototype of the variable
+            console.log(rest) 
+            console.log("Type of rest operator",typeof rest); 
 
             for(i in rest){
                sum+=rest[i];
@@ -25,14 +25,15 @@
         console.log("Last of rest",add(1,2,3,4,5,6,7)); 
         
         //Spread operator
-        let {myname, ...spread }={
+        let obj={
             myname:"hi",
             CompanyName: "CodeSweetly",
             profession: "Web Developer",
             gender: "Male"
         }
-        console.log("this is spread operator",spread)
-        console.log("this is spread operator typeof ",typeof spread)
+        let newobj={...obj,"Emp_id":12356};
+        console.log("this is spread operator",newobj)
+        console.log("this is spread operator typeof ",typeof newobj)
 
 
     </script>
