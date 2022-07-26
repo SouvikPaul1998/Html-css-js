@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //ES6
+        /*The main difference between rest and spread is that the rest operator puts the rest of some 
+        specific user-supplied values into a JavaScript array. But the spread syntax expands iterables into 
+        individual elements.*/
+        function add(a,b,...rest){   //we can use any variable instead of rest it's just variable before which ... needs to be present
+        
+            sum=a+b;
+            console.log(rest) //array object. 
+            console.log("Type of rest operator",typeof rest); //check prototype of the variable
+
+            for(i in rest){
+               sum+=rest[i];
+               
+            }
+            return sum;
+        }
+        console.log("Last of rest",add(1,2,3,4,5,6,7)); 
+        
+        //Spread operator
+        let {myname, ...spread }={
+            myname:"hi",
+            CompanyName: "CodeSweetly",
+            profession: "Web Developer",
+            gender: "Male"
+        }
+        console.log("this is spread operator",spread)
+        console.log("this is spread operator typeof ",typeof spread)
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

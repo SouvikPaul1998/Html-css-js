@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add(a){
+            return function(b){
+                return function(c){
+                return a+b+c;
+                }
+            }
+        }
+        console.log(add(10)(20)(30));  // passing parameters like this is currying
+        /*Currying is an advanced technique of working with functions. It’s used not only in JavaScript, but in other languages as well.
+
+Currying is a transformation of functions that translates a function from callable as f(a, b, c) into callable as f(a)(b)(c).
+
+Currying doesn’t call a function. It just transforms it.*/
+
+//real life example of curry
+
+let userObj={
+    name:"Souvik",
+    age:28
+}
+
+function userInfo(obj){
+    return function(info){
+        return obj[info];
+    }
+}
+let input='age'; //this input can also be user input;
+console.log(userInfo(userObj)(input));
+input='name';
+console.log(userInfo(userObj)(input)); 
+//so this way we can use the same function for multiple usecases at the same time
+
+//infinite currying
+//if i want to add numbers and pass as many values as needed to operate we might need to do curry multiple times
+//Then better way is to apply infinite curry
+function add2(a){
+    return function(b){
+       if(b) return add2(a+b);
+       return a; 
+    }
+}
+console.log(add2(10)(30)(40)(80)())  // we can extend to any number of arguments
+console.log(add2(10)(30)(40)(80)(90)(5)(6)(7)()) 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
