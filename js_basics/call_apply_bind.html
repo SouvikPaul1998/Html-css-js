@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //call function
+        let name={
+            firstname:"Souvik ",
+            lastname:"Paul"
+        }
+        let callfunc=function(home,id){
+            console.log(this.firstname+" "+this.lastname+ home +" "+id);
+        }
+        let name2={
+            firstname:"New ",
+            lastname:"Name"
+        }
+        console.log("from call func")
+        callfunc.call(name,"Dur",567); //first variable is the obj ref pointer and others are arguments of the function
+        callfunc.call(name2,"kol", 345);
+        // this call function will be apllicable even if the callfunc function is inside another object and we try to call via another obj.
+        //apply func
+        console.log("from apply func")
+        callfunc.apply(name,["maharashtra",45690])
+        //only diff between call and apply is the way we pass arguments.
+
+        //bind
+        //bind actual binds the function with the passed object and returns the function.The returned function can be called
+        //somewhere else;
+        console.log("from bind func")
+        let bindFunc=callfunc.bind(name,"Dur",567);
+        console.log(bindFunc)
+        bindFunc();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

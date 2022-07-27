@@ -12,21 +12,35 @@
        }
 
        function myDebounce(callback,d){
-        
+        console.log("from deb")
         let timer;
             return function(...args){
                 if(timer) clearTimeout(timer);
-                setTimeout(()=>{
+                timer=setTimeout(()=>{
                     callback();
                 },d);
             }
        }
+
+      /* function myDebounce(callback,d){  // another way here we use apply function instead of directly calling callback
+        
+        
+        let timer;
+            return function(){
+                let context=this,
+                args=arguments;
+                clearTimeout(timer);
+                timer=setTimeout(()=>{
+                    callback.apply(context,arguments);
+                },d)
+            }
+       }*/
        const optimizedgetData=myDebounce(getData,1000);
 
        
     </script>
 </head>
 <body>
-    <input type="text" onchange="optimizedgetData()">
+    <input type="text" onkeyup="optimizedgetData()">
 </body>
 </html>
