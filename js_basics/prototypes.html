@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arr=["Mike","Adams","Heisenberg"];
+        let obj1={
+            name:"Raman",
+            city:"Atlanta",
+            getIntro: function(){
+                console.log(this.name+" from "+this.city);
+            }
+        }
+        console.log("arr1",arr.__proto__)
+        console.log("arr1",arr.prototype)
+        console.log("arr2",arr.__proto__.__proto__)
+        console.log("obj1",obj1.__proto__)   //obj1.__proto__ = arr.__proto__.__proto__
+        console.log("arr2",arr.__proto__.__proto__.__proto__) //arr.__proto__.__proto__.__proto__=obj1.__proto__.__proto__=null
+        console.log("obj1",obj1.__proto__.__proto__)
+        // so basically array in js have the properties of objects as well
+
+        function fun(){
+            //
+        }
+        console.log("function1",fun.__proto__) // similarly 
+        console.log("function2",fun.__proto__.__proto__) 
+        console.log("function3",fun.__proto__.__proto__.__proto__)
+
+        //never do this in real life;
+        let obj2={
+            name:"Souvik"
+        }
+        obj2.__proto__=obj1; //we are attaching the properties of obj1 in obj2 with the help of obj2's prototype
+        //i.e obj2 is inheriting properties of obj1
+        console.log("obj2 proto attached to obj1",obj2.__proto__)
+        console.log("obj2 name",obj2.name)
+        console.log("obj2 city",obj2.city) 
+        obj2.getIntro(); //name is setting by obj2 but city is by obj1
+
+
+        //If a --> b --> m  --> prototype chaining then
+        /*Property and method look up follows the prototype chain. That is, if you want to look up a property in a, 
+        JavaScript will first look at a itself.If it cannot find it there, it will then look at b. 
+        If it can't find it in b, then it will look in m, and eventually if it can't find it in m, it will return 
+        undefined because m is the 'mother object' 
+         and is not linked to any other object.But if you want to look up a property in b, JavaScript will not 
+         look into a. It will follow the link direction and if it can't find it in b,
+          it will look in m, and will return undefined if it cannot find it in m.*/
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
