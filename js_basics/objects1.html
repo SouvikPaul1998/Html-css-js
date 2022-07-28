@@ -5,7 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="./objects1.js"></script>
+    <script >
+        let employee={
+    name:"Souvik",
+    tech:"Js",
+    'work exp':4  //work exp has a gap in between.So this needs to be in quotes
+}
+
+console.log(employee.name);
+console.log(employee['work exp']);
+let input="name";
+console.log(employee[input])  // here we cannot use employee.input
+console.log(employee.input)  // comes as undefined
+
+//Complex objects -having an object inside object
+
+    </script>
 </head>
 <body>
     
